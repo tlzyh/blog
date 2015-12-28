@@ -87,7 +87,8 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/litten/litten.github.com.git
+  # repository: https://github.com/tlzyh/tlzyh.github.io.git
+  repository: git@github.com:tlzyh/tlzyh.github.io.git
   branch: master
 
 sitemap:
