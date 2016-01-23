@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Litten的博客
-subtitle: 热爱大海与冷笑话的黎小腾君
-description: 华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。 
-author: Litten
-email: litten225@qq.com
-keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验"
+title: tlzyh的博客
+subtitle: Keep looking, Don't settle
+description:  
+author: tlzyh 
+email: tzl.yh@outlook.com
+keywords: "游戏,CPP,Lua,C#,开发者,程序猿,极客,编程,代码,IT网站,Developer,Programmer,Coder,Geek"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://litten.github.io/
+url: http://tlzyh.com/
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -88,7 +88,7 @@ exclude_generator:
 deploy:
   type: git
   # repository: https://github.com/tlzyh/tlzyh.github.io.git
-  repository: git@github.com:tlzyh/tlzyh.github.io.git
+  repository: git@tlz.yh:tlzyh/tlzyh.github.io.git
   branch: master
 
 sitemap:
