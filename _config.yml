@@ -75,13 +75,18 @@ per_page: 8
 pagination_dir: page
 
 # Disqus
-disqus_shortname:
+disqus_shortname: tlzyh
 
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: yilia
+theme: next 
 exclude_generator:
+
+language: zh-Hans
+
+# Baidu Analytics ID
+baidu_analytics: d528e56f5b88431ae61351575cadc34f
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
