@@ -112,8 +112,8 @@ baidu_analytics: d528e56f5b88431ae61351575cadc34f
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  # repository: https://github.com/tlzyh/tlzyh.github.io.git
-  repository: git@tlz.yh:tlzyh/tlzyh.github.io.git
+  repository: https://github.com/tlzyh/tlzyh.github.io.git
+  # repository: git@tlz.yh:tlzyh/tlzyh.github.io.git
   branch: master
 
 sitemap:
