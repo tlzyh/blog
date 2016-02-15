@@ -77,13 +77,33 @@ pagination_dir: page
 # Disqus
 disqus_shortname: tlzyh
 
+# Duoshuo ShortName
+# 多说账号为QQ：22**** 登录
+duoshuo_shortname: tlzyh
+
+# Share
+duoshuo_share: true
+
+# JiaThis 分享服务
+jiathis: true
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.jpg
+# in site  directory(source/uploads): /uploads/avatar.jpg
+# default : /images/default_avatar.jpg
+avatar: /images/head/head.jpg
+
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: next 
 exclude_generator:
 
+# 语言
 language: zh-Hans
+
+# 站点起始时间
+since: 2016
 
 # Baidu Analytics ID
 baidu_analytics: d528e56f5b88431ae61351575cadc34f
