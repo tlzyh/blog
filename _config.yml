@@ -108,6 +108,9 @@ since: 2016
 # Baidu Analytics ID
 baidu_analytics: d528e56f5b88431ae61351575cadc34f
 
+# Swiftype Search Key
+swiftype_key: 5b4xaVD8LFx31QSLno-t
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
