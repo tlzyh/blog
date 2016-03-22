@@ -1,10 +1,11 @@
---layout: post
-
---title: 第0篇 - 阅读环境搭建
-
---date: 2016/02/05
-
---comments: false
+title: 第0篇 - 阅读环境搭建
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -19,6 +20,8 @@
 Lua 使用的是标准C编写而成的，所以，你只需要使用VS创建一个命令行的程序工程，把需要的源文件添加到工程就可以了。
 
 将src目录下除了Makefile，luac.c 的所有文件拷贝到新创建的工程目录下面，并添加到工程中。
+
+<!--more-->
 
 # 2. 编译
 在VS下，原来一些字符串操作的函数都被认为是不安全的，这个时候会出现如下的错误：

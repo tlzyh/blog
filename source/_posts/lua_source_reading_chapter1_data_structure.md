@@ -1,10 +1,11 @@
---layout: post
-
---title: 数据类型结构
-
---date: 2016/02/05
-
---comments: false
+title: 数据类型结构
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -18,6 +19,8 @@
 # 1. TValue
 虽然学习它的数据类型很简单，但是看源代码也就没有那么轻松了。TValue是一个typedef，
 而且被多次typedef。内容如下：
+
+<!--more-->
 
 ```
 /* 1 */

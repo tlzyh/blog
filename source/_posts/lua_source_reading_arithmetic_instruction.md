@@ -1,10 +1,11 @@
---layout: post
-
---title: 算术指令
-
---date: 2016/02/05
-
---comments: false
+title: 算术指令
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -13,6 +14,8 @@
 和内存之间是不能够直接进行运算操作的，所以，如果两个数在内存中的话，需要先把一
 个只先取出到寄存器中，再计算两个数的结果，整个过程是比较复杂的。因为，Lua是基于
 栈的虚拟机，所以，根本不存在这个复杂的操作，所有的操作可以直接在栈上就完成了。
+
+<!--more-->
 
 # 1. 指令集合
 由于算术指格式都是一致的iABC，下面一起列出表达。

@@ -1,10 +1,11 @@
---layout: post
-
---title: UpValue和Table指令
-
---date: 2016/02/05
-
---comments: false
+title: UpValue和Table指令
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -18,6 +19,6 @@
 的操作是一样的。在Lua5.1的时候，全局变量是有固定的指令的，在5.2版本里面，统一
 使用UpValue相关的操作指令了。
 
-
+<!--more-->
 
 

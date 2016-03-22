@@ -1,10 +1,11 @@
---layout: post
-
---title: 操作码
-
---date: 2016/02/05
-
---comments: false
+title: 操作码
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -18,6 +19,8 @@
 * R(x) 表示的是寄存器
 * Kst(x) 表示常量（在常量表中） 
 * RK(x) 该值可能是寄存器也可能是常量，if ISK(x) then Kst(INDEXK(x)) else R(x)
+
+<!--more-->
 
 具体参数如下表所示：
 

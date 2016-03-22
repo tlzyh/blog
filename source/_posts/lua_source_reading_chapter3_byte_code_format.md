@@ -1,10 +1,11 @@
---layout: post
-
---title: 字节码文件结构
-
---date: 2016/02/05
-
---comments: false
+title: 字节码文件结构
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false 
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -21,6 +22,8 @@
 luac.exe是lua脚本的编译程序，你可以使用 -o 来生成对应的字节码文件，而且还可以使
 用-l来列举出一些信息。同时，使用 -l -l 参数可以获得更详细的信息。以下面的lua代码
 作为分析Lua字节码文件结构的实例代码。
+
+<!--more-->
 
 ```
 local a = 1;
@@ -46,7 +49,7 @@ end
 
 编译并且列举出信息，如下图所示：
 
-{{../../images/lua_src/code_list_info.png}}
+![图片](/images/lua_src/code_list_info.png)
 
 # 2. 头结构
 在Lua5.2 中，字节码文件包括两个大的部分：
@@ -71,7 +74,7 @@ end
 
 下面是一个Lua5.2在x386平台下头部的信息：
 
-{{../../images/lua_src/bc_header_format.png}}
+![图片](/images/lua_src/bc_header_format.png)
 
 Lua的文件标志都是 "\033Lua"(在C语言中0开头的数字是8进制的，这里也就是对应图中
 第一个字节的0x1B)，这个字符串可以在lua.h文件中找到，名字为： *LUA_SIGNATURE* 。
@@ -100,7 +103,7 @@ Lua5.2中默认的Number类型为double，所以Number的大小为8字节(0x08)�
 个闭包(closure)。一个函数原型通常由函数头部，指令，和数据组成。详细部分如下表所
 示：
 
-| 名称         | 说明         
+| 名称         | 说明    |
 |--------------|-------|
 | 函数头部     | 包含了函数原型中的一些基本信息，如开始，结束的行号|
 | 指令集合     | 函数中的所有的指令，开始的4个字节表示指令的条数|
@@ -125,7 +128,7 @@ Lua5.2中默认的Number类型为double，所以Number的大小为8字节(0x08)�
 下面分别看看主chunk和一个普通chunk 的函数头部信息。主chunk函数头部字节信息如下
 图所示：
 
-{{../../images/lua_src/main_chunk_func_head.png}}
+![图片](/images/lua_src/main_chunk_func_head.png)
 
 在main chunk中开始的行号和结束的行号都是0，所以前面的8个字节都是0。一个单独的
 模块，没有参数。可变参数的标志为1（这个参数的意义后面再讲）。可以看到函数中寄存
@@ -138,7 +141,7 @@ Lua5.2中默认的Number类型为double，所以Number的大小为8字节(0x08)�
 主chunk的指令开始位置为固定的0x1D。所以，指令结束位置在 （0x0E + 1） * 4 + 0x1D - 1
 = 0x58。指令部分如下图所示：
 
-{{../../images/lua_src/bc_instruction_part.png}}
+![图片](/images/lua_src/bc_instruction_part.png)
 
 # 4. 常量部分
 指令的后面就是常量存储区域。和指令部分有点类似，它的开头的4个字节表示的是常量的
@@ -149,7 +152,7 @@ Lua5.2中默认的Number类型为double，所以Number的大小为8字节(0x08)�
 * 类型。
 * 大小（像Boolean和Number的大小都是知道的，那么该字段省略）。
 
-{{../../images/lua_src/bc_const_part.png}}
+![图片](/images/lua_src/bc_const_part.png)
 
 上图中，红色方框表示的是常量的个数，在main chunk中0x0C个常量。黑色框表示的是常
 量的类型，也是一个常量的开始。lua中数据类型定义如下:

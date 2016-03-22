@@ -1,10 +1,11 @@
---layout: post
-
---title: 传送类指令
-
---date: 2016/02/05
-
---comments: false
+title: 传送类指令
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -22,8 +23,10 @@
 * OP_LOADBOOL
 * OP_LOADNIL
 
+<!--more-->
+
 # 1. OP_MOVE
-*Mov A B    描述为  R(A) := R(B)* </br>
+*Mov A B    描述为  R(A) := R(B)*
 MOV指令有两个参数，都是两个寄存器。将B寄存器的值赋值给A。最直接的例子就是，将
 一个变量的值赋值给另外一个变量，如下：
 
@@ -49,9 +52,7 @@ main <test.lua:0,0> (4 instructions at 008DEE08)
 （先不管它），第三条指令把寄存器0赋值给了寄存器1。从-l出来的信息可以很清楚，看
 到各个指令，那么，它的二进制长什么样呢？使用WinHex打开，代码如下所示：
 
-```
-{{../../images/lua_src/4_mov_instruction.png}}
-```
+![图片](/images/lua_src/4_mov_instruction.png)
 
 指令部分为高亮部分，前面4个字节表示指令个数（0x00000004），Mov在倒数第2处，值为
 0x00000040。参见前面章节中关于Mov指令的格式和参数的使用情况可以知道，Mov指令的格

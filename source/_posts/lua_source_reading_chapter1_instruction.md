@@ -1,10 +1,11 @@
---layout: post
-
---title: 指令格式
-
---date: 2016/02/05
-
---comments: false
+title: 指令格式
+date: 2016-03-21
+layout: post
+comments: true
+categories: Lua源码分析
+toc: false
+tags: [Lua]
+keywords: Lua, 源码阅读
 
 ---
 
@@ -20,10 +21,12 @@
 的毕业设计就是做的一个Dos的模拟器，所以，指令的解析这一块自己也有一点经验，于是，
 这件事情就再一次开始了。自己也会一直看下去，直到看完最后一行代码。
 
+<!--more-->
+
 # 1. 基本指令格式
 在Lua中，指令有4种类型，结构如下图所示：
 
-{{../../images/lua_src/instruction_format.png}}
+![图片](/images/lua_src/instruction_format.png)
 
 指令各个字段的大小在图中已经给出。指令字段中的所有的值，除了sBx之外其他的都是
 无符号整数。这里需要特别注意sBx的值，它的0值不是0而是它的无符号所能表示的最大
