@@ -1,10 +1,10 @@
 @echo off
 set curDir=%~dp0
 
-set scaffoldsDestDir=%curDir%.\..\..\tlzyh\scaffolds
-set sourceDestDir=%curDir%.\..\..\tlzyh\source
-set themesDestDir=%curDir%.\..\..\tlzyh\themes
-set configDest=%curDir%.\..\..\tlzyh\_config.yml
+set scaffoldsDestDir=%curDir%.\..\..\tlzyh.github.io\scaffolds
+set sourceDestDir=%curDir%.\..\..\tlzyh.github.io\source
+set themesDestDir=%curDir%.\..\..\tlzyh.github.io\themes
+set configDest=%curDir%.\..\..\tlzyh.github.io\_config.yml
 
 set scaffoldsSrcDir=%curDir%.\..\scaffolds
 set sourceSrcDir=%curDir%.\..\source
