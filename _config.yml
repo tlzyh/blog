@@ -116,7 +116,7 @@ swiftype_key: 5b4xaVD8LFx31QSLno-t
 deploy:
   type: git
   #repository: https://github.com/tlzyh/tlzyh.github.io.git
-  repository: git@tlz.yh:tlzyh/tlzyh.github.io.git
+  repository: git@github.com:tlzyh/tlzyh.github.io.git
   branch: master
 
 sitemap:
